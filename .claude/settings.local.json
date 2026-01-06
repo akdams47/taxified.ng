@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth:*)",
+      "Bash(git --version:*)",
+      "Bash(where:*)",
+      "Bash(winget install:*)",
+      "Bash(cat:*)",
+      "Bash(\"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" auth status)",
+      "Bash(\"C:/Program Files/GitHub CLI/gh.exe\" auth status)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(\"C:/Program Files/GitHub CLI/gh.exe\" repo create taxified.ng --public --source=. --push)",
+      "Bash(git push:*)"
+    ]
+  }
+}
