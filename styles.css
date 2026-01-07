@@ -814,23 +814,27 @@ p { line-height: 1.75; }
 }
 
 /* ============================================
-   Footer - Simplified Mobile
+   Footer - Compact Mobile (2 columns)
    ============================================ */
 .footer {
-    padding: var(--space-10) 0 calc(var(--space-8) + var(--mobile-bottom-bar));
+    padding: var(--space-8) 0 calc(var(--space-6) + var(--mobile-bottom-bar));
     background: var(--color-secondary);
     color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    margin-bottom: var(--space-8);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.footer-brand {
+    grid-column: 1 / -1;
 }
 
 .footer-brand .logo {
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
 }
 
 .footer-brand .logo-text {
@@ -845,22 +849,23 @@ p { line-height: 1.75; }
 .footer-links h4,
 .footer-contact h4 {
     color: white;
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-sm);
 }
 
 .footer-links ul li,
 .footer-contact ul li {
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
 }
 
 .footer-links a,
 .footer-contact a {
-    display: block;
     color: rgba(255, 255, 255, 0.7);
-    padding: var(--space-2) 0;
-    min-height: var(--touch-target);
+    padding: var(--space-1) 0;
+    min-height: 36px;
     display: flex;
     align-items: center;
+    font-size: var(--font-size-sm);
 }
 
 .footer-links a:active,
@@ -869,13 +874,13 @@ p { line-height: 1.75; }
 }
 
 .footer-bottom {
-    padding-top: var(--space-6);
+    padding-top: var(--space-4);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
 }
 
 .footer-bottom p {
-    font-size: var(--font-size-sm);
+    font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1017,12 +1022,11 @@ p { line-height: 1.75; }
     }
 
     .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
+        grid-template-columns: 2fr 1fr 1fr;
     }
 
     .footer-brand {
-        flex: 2;
+        grid-column: auto;
     }
 
     /* Hide mobile bar, show floating button */
