@@ -202,6 +202,7 @@
     function initializeApp() {
         populateConfig();
         hidePackages();  // Hide packages with show: false
+        populateFAQs();  // Populate FAQs from faqconfig.js
         initNavigation();
         initScrollEffects();
         initSmoothScroll();
@@ -259,6 +260,38 @@
                     existingBadge.remove();
                 }
             }
+        });
+    }
+
+    // ============================================
+    // Populate FAQs from faqconfig.js
+    // ============================================
+    function populateFAQs() {
+        if (typeof FAQ_CONFIG === 'undefined' || !Array.isArray(FAQ_CONFIG)) {
+            console.warn('FAQ_CONFIG not found or invalid');
+            return;
+        }
+
+        const faqList = document.getElementById('faqList');
+        if (!faqList) return;
+
+        // Clear existing content
+        faqList.innerHTML = '';
+
+        // Create FAQ items from config
+        FAQ_CONFIG.forEach(faq => {
+            const details = document.createElement('details');
+            details.className = 'faq-item';
+
+            const summary = document.createElement('summary');
+            summary.textContent = faq.question;
+
+            const answer = document.createElement('p');
+            answer.textContent = faq.answer;
+
+            details.appendChild(summary);
+            details.appendChild(answer);
+            faqList.appendChild(details);
         });
     }
 

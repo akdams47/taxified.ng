@@ -12,6 +12,12 @@ const CONFIG = {
         year: 2025
     },
 
+    // Hero Section
+    hero: {
+        headline: 'Get Expert Help. File Your Taxes. Start Your Business.',
+        subtitle: 'We simplify tax compliance and business registration in Nigeria. Whether you\'re filing returns or launching your LLC, our team handles the paperwork so you can focus on what matters.'
+    },
+
     // Contact Info
     contact: {
         phone: '+234 800 000 0000',
