@@ -2,8 +2,87 @@
     <div class="container">
         <h2 class="section-title">About Us</h2>
         <div class="about-content">
+            <!-- About Image -->
+            <div class="about-image">
+                <img src="https://images.pexels.com/photos/7564353/pexels-photo-7564353.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="African business professionals in meeting" loading="lazy">
+            </div>
+
+            <!-- About Illustration (Hidden on mobile) -->
+            <div class="about-illustration">
+                <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background -->
+                    <circle cx="200" cy="150" r="120" fill="url(#aboutGrad1)" opacity="0.08"/>
+
+                    <!-- Team of 3 people -->
+                    <!-- Person 1 (left) -->
+                    <g class="person-1">
+                        <circle cx="100" cy="120" r="30" fill="#E0F2FE" stroke="#3B82F6" stroke-width="2"/>
+                        <circle cx="100" cy="115" r="18" fill="#334155"/>
+                        <path d="M70 180C70 155 82 140 100 140C118 140 130 155 130 180" fill="#334155"/>
+                        <rect x="85" y="145" width="30" height="35" rx="4" fill="#3B82F6"/>
+                    </g>
+
+                    <!-- Person 2 (center - larger) -->
+                    <g class="person-2">
+                        <circle cx="200" cy="100" r="38" fill="#DBEAFE" stroke="#2563EB" stroke-width="3"/>
+                        <circle cx="200" cy="93" r="22" fill="#1E293B"/>
+                        <path d="M160 180C160 145 175 125 200 125C225 125 240 145 240 180" fill="#1E293B"/>
+                        <rect x="180" y="130" width="40" height="50" rx="6" fill="#2563EB"/>
+                        <!-- Tie detail -->
+                        <path d="M200 135L195 180H205L200 135Z" fill="#1D4ED8"/>
+                    </g>
+
+                    <!-- Person 3 (right) -->
+                    <g class="person-3">
+                        <circle cx="300" cy="120" r="30" fill="#E0F2FE" stroke="#3B82F6" stroke-width="2"/>
+                        <circle cx="300" cy="115" r="18" fill="#475569"/>
+                        <path d="M270 180C270 155 282 140 300 140C318 140 330 155 330 180" fill="#475569"/>
+                        <rect x="285" y="145" width="30" height="35" rx="4" fill="#60A5FA"/>
+                    </g>
+
+                    <!-- Floating badges/icons -->
+                    <!-- Certificate badge -->
+                    <g class="badge-1">
+                        <circle cx="60" cy="80" r="18" fill="white" stroke="#3B82F6" stroke-width="2" filter="url(#aboutShadow)"/>
+                        <path d="M52 80L58 86L70 74" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+
+                    <!-- Shield badge -->
+                    <g class="badge-2">
+                        <circle cx="340" cy="70" r="18" fill="white" stroke="#06B6D4" stroke-width="2" filter="url(#aboutShadow)"/>
+                        <path d="M340 58V75C340 80 335 84 340 86C345 84 340 80 340 75V58" fill="#06B6D4"/>
+                        <path d="M332 62V78C332 82 340 88 340 88C340 88 348 82 348 78V62H332Z" stroke="#06B6D4" stroke-width="2" fill="none"/>
+                    </g>
+
+                    <!-- Star badge -->
+                    <g class="badge-3">
+                        <circle cx="200" cy="200" r="20" fill="#3B82F6" filter="url(#aboutShadow)"/>
+                        <path d="M200 190L202.5 197H210L204 201L206 208L200 204L194 208L196 201L190 197H197.5L200 190Z" fill="white"/>
+                    </g>
+
+                    <!-- Decorative elements -->
+                    <circle cx="50" cy="200" r="6" fill="#60A5FA" opacity="0.5"/>
+                    <circle cx="350" cy="180" r="8" fill="#06B6D4" opacity="0.4"/>
+                    <circle cx="150" cy="220" r="5" fill="#3B82F6" opacity="0.3"/>
+                    <circle cx="280" cy="230" r="7" fill="#60A5FA" opacity="0.4"/>
+
+                    <!-- Base line -->
+                    <rect x="50" y="185" width="300" height="4" rx="2" fill="#E0F2FE"/>
+
+                    <defs>
+                        <linearGradient id="aboutGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#3B82F6"/>
+                            <stop offset="100%" stop-color="#06B6D4"/>
+                        </linearGradient>
+                        <filter id="aboutShadow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.1"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+
             <div class="about-text">
-                <p>Taxified.ng is a service of DHUBs, a trusted business solutions provider dedicated to helping individuals and businesses in Nigeria navigate the complexities of tax compliance and business registration.</p>
+                <p><span data-config="company.name">Taxified.ng</span> is a service of <span data-config="company.parent">DHUBs</span>, a trusted business solutions provider dedicated to helping individuals and businesses in Nigeria navigate the complexities of tax compliance and business registration.</p>
                 <p>Our team of certified professionals brings years of experience in accounting, tax advisory, and corporate services. We understand the Nigerian regulatory landscape and work closely with government agencies to ensure your filings are accurate and timely.</p>
                 <p>We believe that staying compliant shouldn't be complicated. That's why we've streamlined our processes to deliver fast, reliable service—whether you're an individual filing personal taxes or a growing business seeking full compliance support.</p>
             </div>
