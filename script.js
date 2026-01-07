@@ -36,10 +36,56 @@
 
     // Initialize after sections are loaded
     function initializeApp() {
+        populateConfig();
         initNavigation();
         initScrollEffects();
         initSmoothScroll();
         initClickTracking();
+    }
+
+    // ============================================
+    // Populate content from CONFIG
+    // ============================================
+    function populateConfig() {
+        if (typeof CONFIG === 'undefined') {
+            console.warn('CONFIG not found');
+            return;
+        }
+
+        // Update WhatsApp links
+        document.querySelectorAll('[data-wa]').forEach(el => {
+            const message = el.getAttribute('data-wa') || CONFIG.contact.whatsappMessage;
+            el.href = CONFIG.getWhatsAppLink(message);
+        });
+
+        // Update email links
+        document.querySelectorAll('[data-email]').forEach(el => {
+            const subject = el.getAttribute('data-email') || 'Inquiry - General';
+            el.href = CONFIG.getEmailLink(subject);
+        });
+
+        // Update text content
+        document.querySelectorAll('[data-config]').forEach(el => {
+            const key = el.getAttribute('data-config');
+            const value = getConfigValue(key);
+            if (value !== undefined) {
+                el.textContent = value;
+            }
+        });
+
+        // Update href attributes
+        document.querySelectorAll('[data-config-href]').forEach(el => {
+            const key = el.getAttribute('data-config-href');
+            const value = getConfigValue(key);
+            if (value !== undefined) {
+                el.href = value;
+            }
+        });
+    }
+
+    // Helper to get nested config values like "contact.phone"
+    function getConfigValue(path) {
+        return path.split('.').reduce((obj, key) => obj && obj[key], CONFIG);
     }
 
     // ============================================
