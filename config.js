@@ -121,11 +121,12 @@ const CONFIG = {
         }
     },
 
-    // Social Links (add as needed)
+    // Social Links (uncomment and fill in to show icons in footer)
     social: {
         // twitter: 'https://twitter.com/taxified_ng',
         // instagram: 'https://instagram.com/taxified_ng',
-        // linkedin: 'https://linkedin.com/company/taxified-ng'
+        // linkedin: 'https://linkedin.com/company/taxified-ng',
+        // facebook: 'https://facebook.com/taxified.ng'
     },
 
     // Helper functions

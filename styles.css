@@ -1417,6 +1417,39 @@ p {
     color: rgba(255, 255, 255, 0.2);
 }
 
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.footer-social:empty {
+    display: none;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    width: 18px;
+    height: 18px;
+}
+
 .footer-bottom {
     padding-top: var(--space-6);
     margin-top: var(--space-6);
