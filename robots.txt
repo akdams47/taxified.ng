@@ -1,0 +1,12 @@
+# Robots.txt for Taxified.ng
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://taxified.ng/sitemap.xml
+
+# Disallow config files from indexing
+Disallow: /config.js
+Disallow: /faqconfig.js
+Disallow: /.claude/

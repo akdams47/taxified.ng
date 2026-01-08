@@ -33,6 +33,102 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://taxified.ng/#business",
+                "name": "Taxified.ng",
+                "description": "Expert tax filing and LLC registration services in Nigeria. We simplify tax compliance and business registration so you can focus on what matters.",
+                "url": "https://taxified.ng",
+                "logo": "https://taxified.ng/taxified_logo.png",
+                "image": "https://taxified.ng/taxified_logo.png",
+                "priceRange": "₦₦",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "NG",
+                    "addressLocality": "Lagos"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Nigeria"
+                },
+                "serviceType": ["Tax Filing", "LLC Registration", "CAC Registration", "VAT Filing", "Tax Compliance"],
+                "sameAs": []
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://taxified.ng/#website",
+                "url": "https://taxified.ng",
+                "name": "Taxified.ng",
+                "publisher": {"@id": "https://taxified.ng/#business"}
+            },
+            {
+                "@type": "Service",
+                "serviceType": "Tax Filing Services",
+                "provider": {"@id": "https://taxified.ng/#business"},
+                "areaServed": {"@type": "Country", "name": "Nigeria"},
+                "description": "Professional tax filing services for individuals and businesses in Nigeria, including personal income tax, company income tax, VAT filing, and tax clearance certificates."
+            },
+            {
+                "@type": "Service",
+                "serviceType": "LLC Registration Services",
+                "provider": {"@id": "https://taxified.ng/#business"},
+                "areaServed": {"@type": "Country", "name": "Nigeria"},
+                "description": "Complete LLC and company registration services with the Corporate Affairs Commission (CAC) in Nigeria, including name reservation, document preparation, and filing."
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "When is the deadline for filing annual tax returns in Nigeria?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "For individuals, personal income tax returns are due by March 31st of each year. For companies, returns are due within 6 months of the company's year-end."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What documents do I need to register an LLC?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You'll need valid means of identification for all directors/shareholders, passport photographs, proof of address, and your proposed company name."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How long does LLC registration take?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Typically, the CAC registration process takes 7-14 business days once all documents are submitted. Name reservation takes 1-2 days."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What's the difference between an LLC and a Business Name?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "An LLC (Limited Liability Company) is a separate legal entity that protects your personal assets from business liabilities. A Business Name is simply a trading name registered to you as an individual—your personal assets remain at risk."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need to file taxes if my business made no profit?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "It depends on your company size. Under the Nigeria Tax Act 2025, small companies with gross turnover not exceeding ₦50 million are exempt from Company Income Tax. However, larger companies must still file returns even with no profit."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <div id="app">
